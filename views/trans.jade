@@ -1,0 +1,23 @@
+extends layout
+block content
+   
+
+    form(action='/trans', method='post')
+        span="Digite o número da agência que irá transferir"
+        input(type = 'number', name = 'agencia_t', autofocus, required)
+        span="                         "  
+        span="Digite o número da conta que irá transferir"
+        input(type = 'number', name = 'conta_t', autofocus, required)
+        span="                         "        
+        span="Digite o valor a ser transferido"
+        input(type = 'text', name = 'valor', autofocus, required)
+        br
+        span="Digite o número da agência que irá receber"
+        input(type = 'number', name = 'agencia_r', autofocus, required)
+        span="                         "
+        span="Digite o número da conta que irá receber"
+        input(type = 'number', name = 'conta_r', autofocus, required)
+        br        
+        input(type='submit', value='Transferir')
+        br
+        a(href="/users") Criar Conta

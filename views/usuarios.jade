@@ -1,0 +1,22 @@
+extends layout
+block content
+    'Usuarios criados:'
+    each u in usuarios 
+        li= u.nome 
+
+    form(action='/users' , method = 'post' )
+        p="Usuário"
+        input(type = 'text', name = 'usuario[nome]', autofocus, required)
+        p="Agência"
+        input(type = 'number', name = 'usuario[agencia]', autofocus, required)
+        p="Conta"
+        input(type = 'number', name = 'usuario[conta]', autofocus, required)
+        p="valor"
+        input(type = 'text', name = 'usuario[valor]', autofocus, required)
+        br
+        input(type = 'submit', value= 'Enviar')
+        br
+        br
+        a(href="/trans") Transferência
+
+
